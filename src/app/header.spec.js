@@ -5,15 +5,15 @@ var header = require('./header');
 describe('header component', function () {
   beforeEach(function () {
     angular
-      .module('fountainHeader', ['app/header.html'])
-      .component('fountainHeader', header);
-    angular.mock.module('fountainHeader');
+      .module('drmswebHeader', ['app/header.html'])
+      .component('drmswebHeader', header);
+    angular.mock.module('drmswebHeader');
   });
 
-  it('should render \'Fountain Generator\'', angular.mock.inject(function ($rootScope, $compile) {
-    var element = $compile('<fountain-header></fountain-header>')($rootScope);
+  it('should render \'DRMSWeb\'', angular.mock.inject(function ($rootScope, $compile) {
+    var element = $compile('<drmsweb-header></drmsweb-header>')($rootScope);
     $rootScope.$digest();
     var header = element.find('a');
-    expect(header.html().trim()).toEqual('Fountain Generator');
+    expect(header.html().trim()).toEqual('DRMSWeb');
   }));
 });

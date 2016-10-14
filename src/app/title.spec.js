@@ -5,13 +5,13 @@ var title = require('./title');
 describe('title component', function () {
   beforeEach(function () {
     angular
-      .module('fountainTitle', ['app/title.html'])
-      .component('fountainTitle', title);
-    angular.mock.module('fountainTitle');
+      .module('drmswebTitle', ['app/title.html'])
+      .component('drmswebTitle', title);
+    angular.mock.module('drmswebTitle');
   });
 
   it('should render \'Allo, \'Allo!', angular.mock.inject(function ($rootScope, $compile) {
-    var element = $compile('<fountain-title></fountain-title>')($rootScope);
+    var element = $compile('<drmsweb-title></drmsweb-title>')($rootScope);
     $rootScope.$digest();
     var title = element.find('h1');
     expect(title.html().trim()).toEqual('\'Allo, \'Allo!');

@@ -5,9 +5,9 @@ var tech = require('./tech');
 describe('tech component', function () {
   beforeEach(function () {
     angular
-      .module('fountainTech', ['app/techs/tech.html'])
-      .component('fountainTech', tech);
-    angular.mock.module('fountainTech');
+      .module('drmswebTech', ['app/techs/tech.html'])
+      .component('drmswebTech', tech);
+    angular.mock.module('drmswebTech');
   });
 
   it('should render Gulp', angular.mock.inject(function ($rootScope, $compile) {
@@ -19,7 +19,7 @@ describe('tech component', function () {
       text1: 'The streaming build system',
       text2: 'Automate and enhance your workflow'
     };
-    var element = $compile('<fountain-tech tech="fixture"></fountain-tech>')($scope);
+    var element = $compile('<drmsweb-tech tech="fixture"></drmsweb-tech>')($scope);
     $scope.$digest();
     var tech = element.find('h3');
     expect(tech.html().trim()).toEqual('Gulp');
