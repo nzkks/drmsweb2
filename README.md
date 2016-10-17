@@ -1,3 +1,3 @@
-# Webapp-combo2
+# DRMSWeb2
 
-This is using generator-fountain-angular1 yeoman generator.
+Trying different tech combinations for my website.
